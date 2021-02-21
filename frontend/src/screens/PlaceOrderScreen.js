@@ -17,7 +17,7 @@ const PlaceOrderScreen = ({ history }) => {
   cart.itemsPrice = cart.cartItems
     .reduce((acc, item) => acc + item.price * item.qty, 0)
     .toFixed(2);
-  cart.shippingPrice = cart.itemsPrice > 30 ? 0 : 5.99;
+  cart.shippingPrice = cart.itemsPrice > 30 ? 0 : 1.99;
   cart.taxPrice = Number(0.1 * cart.itemsPrice).toFixed(2);
   cart.totalPrice = (
     Number(cart.itemsPrice) +
