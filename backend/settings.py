@@ -215,4 +215,6 @@ AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'alecreations'
 
 if os.getcwd() == '/app':
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWRDED_PROTO', 'https')
+    SECURE_SSL_REDIRECT = True
     DEBUG = False
